@@ -1,0 +1,19 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h1>Видео</h1>
+
+<section class="video-section">
+
+    <video controls poster="/media/videos/course1.jpg">
+        <source src="/media/videos/course1.mp4" type="video/mp4">
+    </video>
+
+    <video controls poster="/media/videos/course2.jpeg">
+        <source src="/media/videos/course2.mp4" type="video/mp4">
+    </video>
+
+</section>
+
+{% endblock %}

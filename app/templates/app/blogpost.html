@@ -1,0 +1,56 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h1>{{ post.title }}</h1>
+<p>
+    <strong>Дата публикации:</strong>
+    {{ post.posted|date:"d.m.Y H:i" }}
+</p>
+{% if post.image %}
+    <img src="{{ post.image.url }}"
+         alt="Картинка статьи блога"
+         style="display: block; max-width: 100%; height: auto; margin: 20px auto; border-radius: 8px;">
+{% endif %}
+<div>
+    {{ post.content|linebreaks }}
+</div>
+
+
+
+
+<hr>
+<h2>Комментарии</h2>
+{% for comment in comments %}
+<div class="comment">
+    <p>
+        <strong>{{ comment.author.username }}</strong>
+        <i> - {{ comment.date|date:"d.m.Y H:i" }}</i>
+    </p>
+
+    <p>{{ comment.text|linebreaks }}</p>
+</div>
+{% empty %}
+<p>Комментариев пока нет.</p>
+{% endfor %}
+
+{% if user.is_authenticated %}
+<form method="post">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type="submit">Добавить комментарий</button>
+</form>
+
+{% else %}
+<p>
+    Чтобы оставить комментарий, необходимо
+    <a href="{% url 'login' %}">войти в аккаунт</a>.
+</p>
+{% endif %}
+
+<br>
+<a class="btn btn-primary" href="{% url 'blog' %}" role="button">Назад</a>
+
+{% endblock %}

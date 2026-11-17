@@ -1,0 +1,21 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+<h1>Блог</h1>
+{% for post in posts %}
+<article>
+    <h3>{{ post.title }}</h2>
+    <p>{{ post.description }}</p>
+    <i>
+        {{ post.posted|date:"d.m.Y H:i" }}
+    </i>
+    <p style="display: flex; margin-left: 80%;">
+        <a class="btn btn-primary" href="{% url 'blogpost' post.id %}" role="button">Читать далее</a>
+    </p>
+</article>
+
+<hr>
+{% empty %}
+<p>Статей пока нет.</p>
+{% endfor %}
+{% endblock %}

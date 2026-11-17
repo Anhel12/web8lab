@@ -1,0 +1,302 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fb;
+    color: #263238;
+    line-height: 1.6;
+}
+
+.shapka {
+    width: 100%;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border-bottom: 2px solid #dce3ea;
+}
+
+.logo {
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.top {
+    list-style-type: none;
+    font-size: 18px;
+}
+
+.top a {
+    color: #263238;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.top a:hover {
+    text-decoration: underline;
+}
+
+main {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 35px;
+}
+
+h2 {
+    font-size: 27px;
+    margin-top: 30px;
+}
+
+h3 {
+    font-size: 21px;
+}
+
+p {
+    font-size: 17px;
+}
+
+.intro {
+    margin-bottom: 40px;
+}
+
+.courses {
+    margin-top: 30px;
+}
+
+.education-image {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+figcaption {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.course-list {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.course {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #eef3f8;
+    border-radius: 8px;
+    
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.course__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    max-width: 50%;
+}
+.course__image-box {
+    max-width: 250px;
+}
+.course__image-box img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.info {
+    margin-top: 40px;
+}
+
+.note {
+    padding: 15px;
+    border-left: 4px solid #263238;
+    background-color: #f0f2f4;
+}
+
+.links-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.links-section h2 {
+    margin-bottom: 50px;
+}
+
+.links-text {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.links-text a,
+.resource-list a,
+.back a {
+    color: #1565c0;
+    text-decoration: none;
+}
+
+.links-text a:hover,
+.resource-list a:hover,
+.back a:hover {
+    text-decoration: underline;
+}
+
+.resource-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.resource {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+    
+}
+
+.resource-list li {
+    margin-bottom: 30px;
+}
+
+.resource-list p {
+    margin-top: 5px;
+}
+
+.back {
+    margin-top: 40px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #ffffff;
+    border-top: 2px solid #dce3ea;
+}
+.logoSite {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(0, 175, 105);
+}
+.btn-new {
+    width: 160%;
+    height: 50px;
+    border-radius: 10px;
+    border-color: transparent;
+    color: white;
+    transition: .2s linear;
+    background: #0B63F6;
+}
+
+.btn-new:hover {
+   box-shadow: #003CC5 0 0px 0px 40px inset;
+}
+
+
+.pour {
+  background-image: linear-gradient(45deg, #0022ff, #00b7ff, #424a92);
+  color: transparent;
+  -webkit-background-clip: text; /* Edge, Chrome */
+  background-clip: text; /* Safari, FF */
+  animation: gradientAnimation 8s linear infinite;
+  animation-direction: alternate;
+  background-size: 300% 100%;
+  font-size: 18px;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0;
+  }
+  to {
+    background-position: 100%;
+  }
+}
+
+.comment {
+    margin: 15px 0;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-left: 4px solid #007bff;
+    border-radius: 5px;
+}
+
+.comment p {
+    margin: 5px 0;
+}
+
+form textarea {
+    width: 100%;
+    max-width: 700px;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.video-section {
+    margin-top: 30px;
+}
+
+.video-section h2 {
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+.video-section video {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    border-radius: 8px;
+}

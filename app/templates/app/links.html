@@ -1,0 +1,50 @@
+{% extends "app/layout.html" %}
+{% load static %}
+
+{% block content %}
+
+<h1>Полезные ресурсы</h1>
+
+<section class="links-section">
+
+    <h2>Ресурсы для изучения программирования</h2>
+
+    <div class="resource-list">
+
+        <div class="resource">
+            <a href="https://skillbox.ru/code/" target="_blank">
+                <img class="logoSite" src="{% static 'app/content/skillbox.svg' %}"
+                     alt="Skillbox">
+            </a>
+            <h3>Skillbox</h3>
+            <p>Онлайн-курсы по программированию и другим направлениям.</p>
+        </div>
+
+        <div class="resource">
+            <a href="https://skillfactory.ru/courses/programmirovanie"
+               target="_blank">
+                <img class="logoSite" src="{% static 'app/content/skillfactory.svg' %}"
+                     alt="SkillFactory">
+            </a>
+            <h3>SkillFactory</h3>
+            <p>Онлайн-курсы по программированию и веб-разработке.</p>
+        </div>
+
+        <div class="resource">
+            <a href="https://stepik.org/learn" target="_blank">
+                <img class="logoSite" src="{% static 'app/content/stepik.svg' %}"
+                     alt="Stepik">
+            </a>
+            <h3>Stepik</h3>
+            <p>Онлайн-курсы по программированию и другим образовательным направлениям.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<p class="back">
+    <a href="{% url 'home' %}">← Вернуться на главную страницу</a>
+</p>
+
+{% endblock %}

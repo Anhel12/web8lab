@@ -1,0 +1,82 @@
+{% extends "app/layout.html" %}
+{% load static %}
+
+{% block content %}
+
+<h1>Обратная связь</h1>
+
+{% if form != None %}
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" id="submit-button">
+        Отправить отзыв
+    </button>
+
+</form>
+<script>
+    const submitButton = document.getElementById("submit-button");
+
+    if (submitButton) {
+        submitButton.addEventListener("mouseover", function () {
+            submitButton.style.color = "red";
+        });
+
+        submitButton.addEventListener("mouseout", function () {
+            submitButton.style.color = "";
+        });
+    }
+
+    const inputs = document.querySelectorAll("input, textarea, select");
+
+    inputs.forEach(function (input) {
+        input.addEventListener("focus", function () {
+            input.style.backgroundColor = "lightblue";
+        });
+
+        input.addEventListener("blur", function () {
+            input.style.backgroundColor = "";
+        });
+    });
+</script>
+{% else %}
+<h2>Спасибо за ваш отзыв!</h2>
+<p>Полученные данные:</p>
+<ul>
+    <li>
+        <strong>Имя:</strong>
+        {{ data.name }}
+    </li>
+
+    <li>
+        <strong>Email:</strong>
+        {{ data.email }}
+    </li>
+
+    <li>
+        <strong>Интересующее направление:</strong>
+        {{ data.course }}
+    </li>
+
+    <li>
+        <strong>Оценка сайта:</strong>
+        {{ data.rating }}
+    </li>
+
+    <li>
+        <strong>Интересующие темы:</strong>
+        {{ data.topics|join:", " }}
+    </li>
+
+    <li>
+        <strong>Пожелания:</strong>
+        {{ data.wishes }}
+    </li>
+
+</ul>
+
+{% endif %}
+
+{% endblock %}
+
