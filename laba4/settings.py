@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-yyxv_s5*f-ip5n79y)mls5+aa8l9sbk7i0+6j!c52-j!=ganet
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'd1mutro.pythonanywhere.com'
+    'dimutro.pythonanywhere.com'
 ]
 
 
